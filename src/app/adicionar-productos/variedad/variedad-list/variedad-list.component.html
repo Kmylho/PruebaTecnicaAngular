@@ -1,0 +1,19 @@
+<table class="table" >
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">VARIEDAD</th>
+      <th scope="col">COLOR</th>
+      <th scope="col">OPCIONES</th>
+    </tr>
+  </thead>
+  <tbody class="table-group-divider">
+    <tr *ngFor="let variedad of variedad">
+      <th scope="row">{{ variedad?.id }}</th>
+      <td>{{ variedad?.variedad }}</td>
+      <td>{{ variedad?.color }}</td>
+      <td>Otto</td>
+    </tr>
+  </tbody>
+</table>
+

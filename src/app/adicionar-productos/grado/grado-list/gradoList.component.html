@@ -1,0 +1,16 @@
+<table class="table" >
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">GRADO</th>
+      <th scope="col">OPCIONES</th>
+    </tr>
+  </thead>
+  <tbody class="table-group-divider">
+    <tr *ngFor="let grado of grado">
+      <th scope="row">{{ grado?.id }}</th>
+      <td>{{ grado?.grado }}</td>
+      <td>Otto</td>
+    </tr>
+  </tbody>
+</table>
