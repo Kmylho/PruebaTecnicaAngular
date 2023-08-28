@@ -1,0 +1,22 @@
+[
+  {
+    "id": "1",
+    "variedad": "variedad 1",
+    "color" : "color A"
+  },
+  {
+    "id": "2",
+    "variedad": "variedad 2",
+    "color" : "color B"
+  },
+  {
+    "id": "3",
+    "variedad": "variedad 3",
+    "color" : "color C"
+  },
+  {
+    "id": "4",
+    "variedad": "variedad 4",
+    "color" : "color D"
+  }
+]
