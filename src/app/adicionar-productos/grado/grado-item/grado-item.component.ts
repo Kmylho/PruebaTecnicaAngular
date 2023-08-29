@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { NgForm, FormGroup, FormControl } from '@angular/forms';
 import { Grado } from 'src/app/models/grado.model';
 
 @Component({
@@ -14,15 +15,16 @@ export class GradoItemComponent implements OnInit{
     console.log(this.grado)
   }
 
-  // addNewGrado():void {
-  //   const data = {
-  //     id : "1",
-  //     grado: "test"
-  //   }
-  //   this.gradoService.addGrado(data).subscribe(Response => {
-  //     console.log("response")
-  //   })
-  //   console.log(data);
-  // }
+  addNewGrado(form:NgForm) {
+    const data = {
+      id : form.value.idGradoNuevo,
+      grado: form.value.gradoGradoNuevo
+    }
+    // this.grado.addGrado(data).subscribe(Response => {
+    //   console.log("response")
+    // })
+    console.log(form.value);
+    console.log(data);
+  }
 
 }

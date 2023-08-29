@@ -13,7 +13,7 @@ export class GradoService {
 
   constructor(private http: HttpClient) { }
 
-  addGrado(id : string , grado: string): Observable<Grado> {
+  addGrado(grado: Grado): Observable<Grado> {
     const body = { grado: grado };
     return this.http.post<Grado>(`${this.ApiUrl}`, body);
   }
