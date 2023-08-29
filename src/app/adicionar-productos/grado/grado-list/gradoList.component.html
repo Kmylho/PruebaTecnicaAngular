@@ -1,3 +1,4 @@
+<app-grado-item></app-grado-item>
 <table class="table" >
   <thead>
     <tr>
@@ -10,7 +11,9 @@
     <tr *ngFor="let grado of grado">
       <th scope="row">{{ grado?.id }}</th>
       <td>{{ grado?.grado }}</td>
-      <td>Otto</td>
+      <td>
+      <!-- <button type="button" class="btn btn-primary" (click)="onGradoEdit()">Editar</button>&nbsp; -->
+        <button type="button" class="btn btn-danger" (click)="onGradoDelete('1')">Eliminar</button></td>
     </tr>
   </tbody>
 </table>

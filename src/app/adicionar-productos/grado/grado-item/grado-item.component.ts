@@ -13,4 +13,16 @@ export class GradoItemComponent implements OnInit{
   ngOnInit(): void {
     console.log(this.grado)
   }
+
+  // addNewGrado():void {
+  //   const data = {
+  //     id : "1",
+  //     grado: "test"
+  //   }
+  //   this.gradoService.addGrado(data).subscribe(Response => {
+  //     console.log("response")
+  //   })
+  //   console.log(data);
+  // }
+
 }

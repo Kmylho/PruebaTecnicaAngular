@@ -1,0 +1,19 @@
+<button class="btn btn-success" style="align-self: right;"> Añadir Grado</button><br><br><br>
+
+<div style="width: 500px; margin: auto;">
+  <div class="submit-form">
+    <div >
+      <div class="form-group">
+        <label for="title">ID</label>
+        <input type="text" class="form-control" id="idGradoNuevo" required name="idGradoNuevo" />
+      </div>
+
+      <div class="form-group">
+        <label for="description">GRADO</label>
+        <input class="form-control" id="gradoGradoNuevo" required name="gradoGradoNuevo" />
+      </div>
+
+      <button (click)="addNewGrado()" class="btn btn-success">Crear Grado</button>
+    </div>
+  </div>
+</div>
