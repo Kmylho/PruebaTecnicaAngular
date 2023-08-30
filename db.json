@@ -32,7 +32,8 @@
       "id": 3,
       "variedad": "Variedad 3",
       "color": "Color C"
-    },{
+    },
+    {
       "id": 4,
       "variedad": "Variedad 4",
       "color": "Color D"
@@ -44,28 +45,32 @@
       "nombre": "Nombre 1",
       "especie": "Especie A",
       "variedad": "Variedad 1",
-      "grado": "Grado 1"
+      "grado": "Grado 1",
+      "foto": "imagen"
     },
     {
       "id": 2,
       "nombre": "Nombre 2",
       "especie": "Especie B",
       "variedad": "Variedad 2",
-      "grado": "Grado 2"
+      "grado": "Grado 2",
+      "foto": "imagen"
     },
     {
       "id": 3,
       "nombre": "Nombre 3",
       "especie": "Especie C",
       "variedad": "Variedad 3",
-      "grado": "Grado 3"
+      "grado": "Grado 3",
+      "foto": "imagen"
     },
     {
       "id": 4,
       "nombre": "Nombre 4",
       "especie": "Especie D",
       "variedad": "Variedad 4",
-      "grado": "Grado 4"
+      "grado": "Grado 4",
+      "foto": "imagen"
     }
   ]
 }

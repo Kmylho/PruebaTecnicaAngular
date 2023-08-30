@@ -1,1 +1,41 @@
-<p>grado works!</p>
+<div class="container">
+  <div class="row">
+    <div class="col-md-5 col-lg-5 offset-md1 col-sm-6">
+      <div class="d-flex justify-content-between mb-5">
+        <div>
+          <input type="text" class="form-control" placeholder="Buscar grados..." autocomplete="off">
+        </div>
+        <div>
+          <a [routerLink]="['/add-grado']" class="p-2">
+            <button class="btn btn-primary">Añadir Grado</button>
+          </a>
+        </div>
+      </div>
+
+      <div style="overflow-x: auto;">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col">GRADO</th>
+              <th scope="col"></th>
+            </tr>
+          </thead>
+          <tbody class="table-group-divider">
+            <tr *ngFor="let grado of grados$; let i = index">
+              <td scope="row">{{ grado.id }}</td>
+              <td scope="row">{{ grado.grado }}</td>
+              <td class="td-btn">
+                <div class="btn-group" role="group">
+                  <button type="button" class="btn btn-outline-success btn-sm p-2" (click)="onUpdateGrado(grado.id)">Editar</button>
+                  <button type="button" class="btn btn-outline-danger btn-sm mr-2" (click)="onDeleteGrado(grado.id)">Eliminar</button>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </div>
+</div>
