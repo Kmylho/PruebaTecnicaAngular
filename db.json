@@ -1,0 +1,71 @@
+{
+  "gradosDB": [
+    {
+      "id": 1,
+      "grado": "Grado 1"
+    },
+    {
+      "id": 2,
+      "grado": "Grado 2"
+    },
+    {
+      "id": 3,
+      "grado": "Grado 3"
+    },
+    {
+      "id": 4,
+      "grado": "Grado 4"
+    }
+  ],
+  "variedadesDB": [
+    {
+      "id": 1,
+      "variedad": "Variedad 1",
+      "color": "Color A"
+    },
+    {
+      "id": 2,
+      "variedad": "Variedad 2",
+      "color": "Color B"
+    },
+    {
+      "id": 3,
+      "variedad": "Variedad 3",
+      "color": "Color C"
+    },{
+      "id": 4,
+      "variedad": "Variedad 4",
+      "color": "Color D"
+    }
+  ],
+  "productosDB": [
+    {
+      "id": 1,
+      "nombre": "Nombre 1",
+      "especie": "Especie A",
+      "variedad": "Variedad 1",
+      "grado": "Grado 1"
+    },
+    {
+      "id": 2,
+      "nombre": "Nombre 2",
+      "especie": "Especie B",
+      "variedad": "Variedad 2",
+      "grado": "Grado 2"
+    },
+    {
+      "id": 3,
+      "nombre": "Nombre 3",
+      "especie": "Especie C",
+      "variedad": "Variedad 3",
+      "grado": "Grado 3"
+    },
+    {
+      "id": 4,
+      "nombre": "Nombre 4",
+      "especie": "Especie D",
+      "variedad": "Variedad 4",
+      "grado": "Grado 4"
+    }
+  ]
+}
