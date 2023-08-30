@@ -9,10 +9,12 @@ import { VariedadComponent } from './variedad/variedad.component';
 import { ProductoComponent } from './producto/producto.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ToastrModule } from 'ngx-toastr';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
     declarations: [
-        AppComponent
+        AppComponent,
+        HeaderComponent
     ],
     providers: [],
     bootstrap: [AppComponent],

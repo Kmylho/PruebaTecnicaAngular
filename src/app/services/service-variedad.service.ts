@@ -13,7 +13,7 @@ export class ServiceVariedadService {
   constructor(private http: HttpClient) { }
 
   editVariedad(id: any, input: any){
-    return this.http.patch(`${this.data}/${id}`,input);
+    return this.http.patch(`${this.data}/${id}`, input);
   }
 
   getVariedades(): Observable<any> {
@@ -21,14 +21,14 @@ export class ServiceVariedadService {
   }
 
   getVariedad(id: string): Observable<any> {
-    return this.http.get(`${this.data}/$${id}`);
+    return this.http.get(`${this.data}/${id}`);
   }
 
   deleteVariedad(id: string): Observable<any> {
     return this.http.delete(`${this.data}/$${id}`) ;
   }
 
-  postVariedad(input: any): Observable<any> {
-    return this.http.post(`${this.data}`,input );
+  postVariedad(input: string): Observable<any> {
+    return this.http.post<any>(`${this.data}`, input);
   }
 }

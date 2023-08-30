@@ -1,25 +1,20 @@
 <div class="container">
   <div class="row">
-    <div class="col-md-5 col-lg-5 offset-md1 col-sm-6">
-      <div class="d-flex justify-content-between mb-5">
-        <div>
-          <input type="text" class="form-control" placeholder="Buscar variedades..." autocomplete="off">
-        </div>
-        <div>
-          <a [routerLink]="['/add-variedades']" class="p-2">
-            <button class="btn btn-primary">Añadir variedad</button>
-          </a>
-        </div>
-      </div>
-
+    <div class="col-md-12 col-lg-12 offset-md1 col-sm-12">
       <div style="overflow-x: auto;">
-        <table class="table">
+        <table class="table" >
           <thead>
             <tr>
               <th scope="col">ID</th>
               <th scope="col">VARIEDAD</th>
               <th scope="col">COLOR</th>
-              <th scope="col"></th>
+              <th scope="col">
+                <div>
+                  <a [routerLink]="['/add-variedades']" class="p-2">
+                    <button class="btn btn-primary">Añadir variedad</button>
+                  </a>
+                </div>
+              </th>
             </tr>
           </thead>
           <tbody class="table-group-divider">

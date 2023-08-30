@@ -1,17 +1,6 @@
 <div class="container">
   <div class="row">
-    <div class="col-md-10 col-lg-10 offset-md1 col-sm-12">
-      <div class="d-flex justify-content-between mb-5">
-        <div>
-          <input type="text" class="form-control" placeholder="Buscar productos..." autocomplete="off">
-        </div>
-        <div>
-          <a [routerLink]="['/add-producto']" class="p-2">
-            <button class="btn btn-primary">Añadir Producto</button>
-          </a>
-        </div>
-      </div>
-
+    <div class="col-md-12 col-lg-12 offset-md1 col-sm-12">
       <div style="overflow-x: auto;">
         <table class="table">
           <thead>
@@ -22,7 +11,13 @@
               <th scope="col">VARIEDAD</th>
               <th scope="col">GRADO</th>
               <th scope="col">FOTO</th>
-              <th scope="col"></th>
+              <th scope="col">
+                <div>
+                  <a [routerLink]="['/add-producto']" class="p-2">
+                    <button class="btn btn-primary">Añadir Producto</button>
+                  </a>
+                </div>
+              </th>
             </tr>
           </thead>
           <tbody class="table-group-divider">

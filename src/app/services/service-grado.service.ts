@@ -12,7 +12,7 @@ export class ServiceGradoService {
   constructor(private http: HttpClient) { }
 
   editGrado(id: any, input: any){
-    return this.http.patch(`${this.data}/${id}`,input);
+    return this.http.patch(`${this.data}/${id}`, input);
   }
 
   getGrados(): Observable<any> {
@@ -20,15 +20,15 @@ export class ServiceGradoService {
   }
 
   getGrado(id: string): Observable<any> {
-    return this.http.get(`${this.data}/$${id}`);
+    return this.http.get(`${this.data}/${id}`);
   }
 
   deleteGrado(id: string): Observable<any> {
-    return this.http.delete(`${this.data}/$${id}`) ;
+    return this.http.delete(`${this.data}/${id}`) ;
   }
 
-  postGrado(input: any): Observable<any> {
-    return this.http.post(`${this.data}`,input );
+  postGrado(input: string): Observable<any> {
+    return this.http.post<any>(`${this.data}`, input);
   }
 
 }

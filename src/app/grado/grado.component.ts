@@ -10,6 +10,7 @@ import { ToastrService } from 'ngx-toastr';
   selector: 'app-grado',
   standalone: true,
   imports: [CommonModule, RouterModule, AddGradoComponent, EditGradoComponent],
+  providers: [ServiceGradoService],
   templateUrl: './grado.component.html',
   styleUrls: ['./grado.component.css']
 })

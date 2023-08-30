@@ -12,7 +12,7 @@ export class ServiceProductoService {
   constructor(private http: HttpClient) { }
 
   editProducto(id: any, input: any){
-    return this.http.patch(`${this.data}/${id}`,input);
+    return this.http.patch(`${this.data}/${id}`, input);
   }
 
   getProductos(): Observable<any> {
@@ -20,14 +20,14 @@ export class ServiceProductoService {
   }
 
   getProducto(id: string): Observable<any> {
-    return this.http.get(`${this.data}/$${id}`);
+    return this.http.get(`${this.data}/${id}`);
   }
 
   deleteProducto(id: string): Observable<any> {
     return this.http.delete(`${this.data}/$${id}`) ;
   }
 
-  postProducto(input: any): Observable<any> {
-    return this.http.post(`${this.data}`,input );
+  postProducto(input: string): Observable<any> {
+    return this.http.post<any>(`${this.data}`, input);
   }
 }
