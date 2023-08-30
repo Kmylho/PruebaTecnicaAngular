@@ -10,6 +10,7 @@ import { ToastrService } from 'ngx-toastr';
   selector: 'app-producto',
   standalone: true,
   imports: [CommonModule,RouterModule, AddProductoComponent, EditProductoComponent],
+  providers: [ServiceProductoService],
   templateUrl: './producto.component.html',
   styleUrls: ['./producto.component.css']
 })

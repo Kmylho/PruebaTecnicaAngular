@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { FormGroup, FormBuilder, FormControl, ReactiveFormsModule } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
 import { ServiceGradoService } from 'src/app/services/service-grado.service';
-import { ResourceLoader } from '@angular/compiler';
 
 @Component({
   selector: 'app-add-grado',

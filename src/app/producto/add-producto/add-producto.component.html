@@ -1,1 +1,38 @@
-<p>add-producto works!</p>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4 col-lg-4 offset-md-4 col-sm-12 mb-5">
+      <form [formGroup]="FormData" role="form" (ngSubmit)="onSubmit(FormData.value)">
+        <div class="form-group mb-3">
+          <h2>Añadir Producto</h2>
+        </div>
+        <div class="form-group">
+          <label>ID</label>
+          <input type="text" formControlName="id" class="form-control" placeholder="ID">
+        </div>
+        <div class="form-group">
+          <label>NOMBRE</label>
+          <input type="text" formControlName="nombre" class="form-control" placeholder="NOMBRE">
+        </div>
+        <div class="form-group">
+          <label>ESPECIE</label>
+          <input type="text" formControlName="especie" class="form-control" placeholder="ESPECIE">
+        </div>
+        <div class="form-group">
+          <label>VARIEDAD</label>
+          <input type="text" formControlName="variedad" class="form-control" placeholder="VARIEDAD">
+        </div>
+        <div class="form-group">
+          <label>GRADO</label>
+          <input type="text" formControlName="grado" class="form-control" placeholder="GRADO">
+        </div>
+        <div class="form-group">
+          <label>FOTO</label>
+          <input type="text" formControlName="foto" class="form-control" placeholder="FOTO">
+        </div>
+        <div class="mt-2">
+          <button type="submit" class="btn btn-success">Añadir</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

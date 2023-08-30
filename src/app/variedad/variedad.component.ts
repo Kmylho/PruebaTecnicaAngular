@@ -10,6 +10,7 @@ import { ToastrService } from 'ngx-toastr';
   selector: 'app-variedad',
   standalone: true,
   imports: [CommonModule,RouterModule, AddVariedadComponent, EditVariedadComponent],
+  providers: [ServiceVariedadService],
   templateUrl: './variedad.component.html',
   styleUrls: ['./variedad.component.css']
 })

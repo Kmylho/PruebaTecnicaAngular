@@ -37,6 +37,15 @@
       "id": "4",
       "variedad": "Variedad 4",
       "color": "Color D"
+    },
+    {
+      "id": "QA",
+      "grado": ""
+    },
+    {
+      "id": "QA2",
+      "variedad": "QA3",
+      "color": "QA4"
     }
   ],
   "productosDB": [
@@ -71,6 +80,14 @@
       "variedad": "Variedad 4",
       "grado": "Grado 4",
       "foto": "imagen"
+    },
+    {
+      "id": "QA",
+      "nombre": "QA",
+      "especie": "QA",
+      "variedad": "QA",
+      "grado": "QA",
+      "foto": "QA"
     }
   ]
 }
