@@ -2,11 +2,11 @@
   "gradosDB": [
     {
       "id": "1",
-      "grado": "Grados"
+      "grado": "Grado 1"
     },
     {
       "id": "2",
-      "grado": "Grado QA"
+      "grado": "Grado 2"
     },
     {
       "id": "3",
@@ -20,8 +20,8 @@
   "variedadesDB": [
     {
       "id": "1",
-      "variedad": "qwe",
-      "color": "rty"
+      "variedad": "Variedad 1",
+      "color": "color A"
     },
     {
       "id": "2",
@@ -37,17 +37,6 @@
       "id": "4",
       "variedad": "Variedad 4",
       "color": "Color D"
-    },
-    {
-      "id": "QA",
-      "grado": "",
-      "variedad": "QA1",
-      "color": "QA2"
-    },
-    {
-      "id": "QA2",
-      "variedad": "QA3",
-      "color": "QA4"
     }
   ],
   "productosDB": [
@@ -82,14 +71,6 @@
       "variedad": "Variedad 4",
       "grado": "Grado 4",
       "foto": "imagen"
-    },
-    {
-      "id": "QA",
-      "nombre": "QA2",
-      "especie": "QA3",
-      "variedad": "QA4",
-      "grado": "QA5",
-      "foto": "QA6"
     }
   ]
 }
