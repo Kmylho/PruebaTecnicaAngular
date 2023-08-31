@@ -40,7 +40,7 @@ export class VariedadComponent {
   }
 
   onUpdateVariedad(id: any) {
-    this.router.navigate([`/update/${id}`]);
+    this.router.navigate([`/edit-variedad/${id}`]);
   }
 
 }

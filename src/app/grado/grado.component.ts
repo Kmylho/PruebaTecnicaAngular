@@ -39,7 +39,7 @@ export class GradoComponent {
   }
 
   onUpdateGrado(id: any) {
-    this.router.navigate([`/update/${id}`]);
+    this.router.navigate([`/edit-grado/${id}`]);
   }
 
 

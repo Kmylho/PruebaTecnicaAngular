@@ -10,6 +10,7 @@ import { AddVariedadComponent } from './variedad/add-variedad/add-variedad.compo
 import { EditVariedadComponent } from './variedad/edit-variedad/edit-variedad.component';
 import { AddProductoComponent } from './producto/add-producto/add-producto.component';
 import { EditProductoComponent } from './producto/edit-producto/edit-producto.component';
+import { AdicionarProductoComponent } from './adicionar-producto/adicionar-producto.component';
 
 const routes: Routes = [
   { path: '',component: AppComponent, pathMatch: 'prefix'},
@@ -17,12 +18,14 @@ const routes: Routes = [
   { path: 'edit-grado/:id',component: EditGradoComponent },
   { path: 'add-variedad',component: AddVariedadComponent },
   { path: 'edit-variedad/:id',component: EditVariedadComponent },
+  { path: 'producto',component: ProductoComponent },
+  { path: 'adicionar-producto',component: AdicionarProductoComponent },
   { path: 'add-producto',component: AddProductoComponent },
-  { path: 'edit-producto',component: EditProductoComponent },
+  { path: 'edit-producto/:id',component: EditProductoComponent },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes), GradoComponent, VariedadComponent, ProductoComponent],
+  imports: [RouterModule.forRoot(routes), GradoComponent, VariedadComponent],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

@@ -10,11 +10,13 @@ import { ProductoComponent } from './producto/producto.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ToastrModule } from 'ngx-toastr';
 import { HeaderComponent } from './header/header.component';
+import { AdicionarProductoComponent } from './adicionar-producto/adicionar-producto.component';
 
 @NgModule({
     declarations: [
         AppComponent,
-        HeaderComponent
+        HeaderComponent,
+        AdicionarProductoComponent
     ],
     providers: [],
     bootstrap: [AppComponent],

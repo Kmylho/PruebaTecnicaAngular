@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormBuilder, FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { FormGroup, FormBuilder, FormControl, ReactiveFormsModule } from '@angular/forms';
 import { ServiceGradoService } from 'src/app/services/service-grado.service';
 import { ActivatedRoute } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
@@ -16,8 +16,8 @@ export class EditGradoComponent {
 
   FormData!: FormGroup;
   isloading!: boolean;
-  grado$!: any;
   id!: any;
+  grado$!: any;
 
   constructor(private builder: FormBuilder, private grado: ServiceGradoService, private route: ActivatedRoute, private toastr: ToastrService) {}
 
@@ -25,27 +25,29 @@ export class EditGradoComponent {
     this.route.paramMap.subscribe((params)=> {
       this.id = params.get('id');
       this.grado.getGrado(this.id).subscribe((res)=> {
-        this.grado$ = res
-        this.FormData.patchValue(this.updateFormValues())
-      })
-    })
+        this.grado$ = res;
+        this.FormData.patchValue(this.updateFormValues());
+      });
+    });
 
     this.FormData = this.builder.group({
+      id: new FormControl(''),
       grado: new FormControl(''),
-    })
+    });
   }
 
   onSubmit(formData: any) {
     this.grado.editGrado(this.id, formData).subscribe(res => {
-      this.toastr.success("Actualizada Correctamente")
+      this.toastr.success('Actualizado correctamente');
       setTimeout(() => {
-        location.href = '/';
+        location.href = '/adicionar-producto'
       }, 2000);
-    })
+    });
   }
 
   updateFormValues () {
     return{
+      id: this.grado$.id,
       grado: this.grado$.grado,
     }
   }

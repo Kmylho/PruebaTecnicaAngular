@@ -2,11 +2,11 @@
   "gradosDB": [
     {
       "id": "1",
-      "grado": "Grado 1"
+      "grado": "Grados"
     },
     {
       "id": "2",
-      "grado": "Grado 2"
+      "grado": "Grado QA"
     },
     {
       "id": "3",
@@ -20,8 +20,8 @@
   "variedadesDB": [
     {
       "id": "1",
-      "variedad": "Variedad 1",
-      "color": "Color A"
+      "variedad": "qwe",
+      "color": "rty"
     },
     {
       "id": "2",
@@ -40,7 +40,9 @@
     },
     {
       "id": "QA",
-      "grado": ""
+      "grado": "",
+      "variedad": "QA1",
+      "color": "QA2"
     },
     {
       "id": "QA2",
@@ -83,11 +85,11 @@
     },
     {
       "id": "QA",
-      "nombre": "QA",
-      "especie": "QA",
-      "variedad": "QA",
-      "grado": "QA",
-      "foto": "QA"
+      "nombre": "QA2",
+      "especie": "QA3",
+      "variedad": "QA4",
+      "grado": "QA5",
+      "foto": "QA6"
     }
   ]
 }

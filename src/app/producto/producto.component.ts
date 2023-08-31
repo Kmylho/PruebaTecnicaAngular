@@ -39,7 +39,7 @@ export class ProductoComponent {
   }
 
   onUpdateProducto(id: any) {
-    this.router.navigate([`/update/${id}`]);
+    this.router.navigate([`/edit-producto/${id}`]);
   }
 
 

@@ -1,1 +1,26 @@
-<p>edit-variedad works!</p>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4 col-lg-4 offset-md4 col-ms-12 mb-5">
+      <form [formGroup]="FormData" role="form" (ngSubmit)="onSubmit(FormData.value)">
+        <div class="form-group mb-3">
+          <h2>Editar Variedad</h2>
+        </div>
+        <div class="form-group">
+          <label>ID</label>
+          <input type="text" formControlName="id" class="form-control">
+        </div>
+        <div class="form-group">
+          <label>VARIEDAD</label>
+          <input type="text" formControlName="variedad" class="form-control">
+        </div>
+        <div class="form-group">
+          <label>COLOR</label>
+          <input type="text" formControlName="color" class="form-control">
+        </div>
+        <div class="mt-2">
+          <button type="submit" class="btn btn-success" [disabled]="isloading">Actualizar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

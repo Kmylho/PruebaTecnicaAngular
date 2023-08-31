@@ -7,15 +7,16 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a [routerLink]="['/']" class="p-2">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Adicionar Productos</a>
+          <a [routerLink]="['/adicionar-producto']" class="p-2">Adicionar Productos</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Listar Productos</a>
+          <a [routerLink]="['/producto']" class="p-2">Listar Productos</a>
         </li>
       </ul>
     </div>
   </div>
 </nav>
+<router-outlet></router-outlet>
