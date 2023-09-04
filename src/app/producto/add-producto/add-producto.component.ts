@@ -1,14 +1,16 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormGroup, FormBuilder, FormControl, ReactiveFormsModule } from '@angular/forms';
+import { FormGroup, FormBuilder, FormControl, ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
 import { ServiceProductoService } from 'src/app/services/service-producto.service';
 import { ServiceVariedadService } from 'src/app/services/service-variedad.service';
 import { ServiceGradoService } from 'src/app/services/service-grado.service';
+import { Observable, subscribeOn } from 'rxjs';
+import { Subscriber } from 'rxjs/internal/Subscriber';
 @Component({
   selector: 'app-add-producto',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule],
+  imports: [CommonModule, ReactiveFormsModule, FormsModule],
   providers: [ServiceVariedadService, ServiceGradoService],
   templateUrl: './add-producto.component.html',
   styleUrls: ['./add-producto.component.css']
@@ -20,6 +22,8 @@ export class AddProductoComponent {
 
   FormData!: FormGroup;
   isloading!: boolean;
+  myImage!: Observable<any>;
+  base64!: any;
 
   constructor(
     private builder: FormBuilder,
@@ -27,6 +31,7 @@ export class AddProductoComponent {
     private toastr: ToastrService,
     private variedad: ServiceVariedadService,
     private grado: ServiceGradoService,
+
   ) {}
 
   ngOnInit(): void {
@@ -69,6 +74,41 @@ export class AddProductoComponent {
         this.reset();
       }, 2000);
     });
+  }
+
+  capturarFile = ($event: Event) => {
+    const target = $event.target as HTMLInputElement;
+    const file: File = (target.files as FileList)[0];
+    this.convertToBase64(file);
+
+  }
+
+  convertToBase64(file : File){
+    const observable = new Observable((subscriber: Subscriber<any>) => {
+      this.readFile(file,subscriber)
+    })
+
+    observable.subscribe((d)=> {
+      console.log(d)
+      this.myImage = d
+      this.base64 = d
+    })
+  }
+
+  readFile(file: File, subscriber: Subscriber<any>){
+    const filereader = new FileReader();
+
+    filereader.readAsDataURL(file)
+
+    filereader.onload = () => {
+      subscriber.next(filereader.result);
+      subscriber.complete
+    }
+
+    filereader.onerror = () =>{
+      subscriber.error()
+      subscriber.complete()
+    }
   }
 
 }

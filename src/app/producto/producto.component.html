@@ -31,7 +31,7 @@
               <td scope="row">{{ producto.especie }}</td>
               <td scope="row">{{ producto.variedad }}</td>
               <td scope="row">{{ producto.grado }}</td>
-              <td scope="row">{{ producto.foto }}</td>
+              <td scope="row"><img [src]= [producto.foto] width="100px"></td>
               <td class="td-btn">
                 <div class="btn-group" role="group">
                   <button type="button" class="btn btn-outline-success btn-sm p-2" (click)="onUpdateProducto(producto.id)">Editar</button>
@@ -48,19 +48,16 @@
 </div>
 
 
-<div class="container">
+<!-- <div class="container">
   <dx-data-grid id="gridContainer"
   [dataSource]="dataSource"
   keyExpr="ID"
   [showBorders]="true"
   [focusedRowEnabled]="true"  >
-    <!-- <dxo-search-panel
+    <dxo-search-panel
     [visible]="true"
     [highlightCaseSensitive]="true"
-  ></dxo-search-panel> -->
+  ></dxo-search-panel>
   </dx-data-grid>
-
-
-
-</div>
+</div> -->
 
