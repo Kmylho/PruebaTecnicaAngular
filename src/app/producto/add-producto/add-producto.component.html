@@ -7,7 +7,7 @@
         </div>
         <div class="form-group">
           <label>ID</label>
-          <input type="text" formControlName="id" class="form-control" placeholder="ID">
+          <input type="number" min="1" formControlName="id" class="form-control" placeholder="ID">
         </div>
         <div class="form-group">
           <label>NOMBRE</label>
@@ -20,13 +20,13 @@
         <div class="form-group">
           <label>VARIEDAD</label>
           <select class="form-select" aria-label="Default select example" formControlName="variedad">
-            <option *ngFor="let variedad of variedades$; let i = index" >{{ variedad.variedad }}</option>
+            <option *ngFor="let variedad of variedades$" >{{ variedad.variedad }}</option>
           </select>
         </div>
         <div class="form-group">
           <label>GRADO</label>
           <select class="form-select" aria-label="Default select example" formControlName="grado">
-            <option *ngFor="let grado of grados$; let i = index" >{{ grado.grado }}</option>
+            <option *ngFor="let grado of grados$" >{{ grado.grado }}</option>
           </select>
         </div>
         <div class="form-group">

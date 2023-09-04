@@ -9,7 +9,7 @@ import { ServiceGradoService } from 'src/app/services/service-grado.service';
   selector: 'app-add-producto',
   standalone: true,
   imports: [CommonModule, ReactiveFormsModule],
-  providers: [ServiceVariedadService],
+  providers: [ServiceVariedadService, ServiceGradoService],
   templateUrl: './add-producto.component.html',
   styleUrls: ['./add-producto.component.css']
 })

@@ -21,7 +21,7 @@
     {
       "id": "1",
       "variedad": "Variedad 1",
-      "color": "color A"
+      "color": "Azul"
     },
     {
       "id": "2",
@@ -44,8 +44,8 @@
       "id": "1",
       "nombre": "Nombre 1",
       "especie": "Especie A",
-      "variedad": "Variedad 1",
-      "grado": "Grado 1",
+      "variedad": "Variedad 2",
+      "grado": "Grado 3",
       "foto": "imagen"
     },
     {

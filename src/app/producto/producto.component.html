@@ -1,4 +1,14 @@
-<div class="container">
+<div class="container" >
+  <h1>Lista de productos</h1><br><br>
+  <div class="row col-md-6 col-lg-6">
+    <div class="input-group">
+      <input type="text" class="form-control" placeholder="Buscar Producto" #buscador (keyup)="busqueda(buscador)">
+      <a [routerLink]="['/add-producto']" >
+        <button class="btn btn-primary">Añadir Producto</button>
+      </a>
+    </div>
+  </div>
+  <br>
   <div class="row">
     <div class="col-md-12 col-lg-12 offset-md1 col-sm-12">
       <div style="overflow-x: auto;">
@@ -11,17 +21,11 @@
               <th scope="col">VARIEDAD</th>
               <th scope="col">GRADO</th>
               <th scope="col">FOTO</th>
-              <th scope="col">
-                <div>
-                  <a [routerLink]="['/add-producto']" class="p-2">
-                    <button class="btn btn-primary">Añadir Producto</button>
-                  </a>
-                </div>
-              </th>
+              <th scope="col">OPCIONES</th>
             </tr>
           </thead>
           <tbody class="table-group-divider">
-            <tr *ngFor="let producto of productos$; let i = index">
+            <tr *ngFor="let producto of productos$">
               <td scope="row">{{ producto.id }}</td>
               <td scope="row">{{ producto.nombre }}</td>
               <td scope="row">{{ producto.especie }}</td>
@@ -42,3 +46,21 @@
     </div>
   </div>
 </div>
+
+
+<div class="container">
+  <dx-data-grid id="gridContainer"
+  [dataSource]="dataSource"
+  keyExpr="ID"
+  [showBorders]="true"
+  [focusedRowEnabled]="true"  >
+    <!-- <dxo-search-panel
+    [visible]="true"
+    [highlightCaseSensitive]="true"
+  ></dxo-search-panel> -->
+  </dx-data-grid>
+
+
+
+</div>
+
