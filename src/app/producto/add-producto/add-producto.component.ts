@@ -1,11 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormGroup, FormBuilder, FormControl, ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { FormGroup, FormBuilder, FormControl, ReactiveFormsModule, FormsModule, Validators } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
 import { ServiceProductoService } from 'src/app/services/service-producto.service';
 import { ServiceVariedadService } from 'src/app/services/service-variedad.service';
 import { ServiceGradoService } from 'src/app/services/service-grado.service';
-import { Observable, subscribeOn } from 'rxjs';
+import { Observable } from 'rxjs';
 import { Subscriber } from 'rxjs/internal/Subscriber';
 @Component({
   selector: 'app-add-producto',
@@ -36,9 +36,9 @@ export class AddProductoComponent {
 
   ngOnInit(): void {
     this.FormData = this.builder.group({
-      id: new FormControl(''),
-      nombre: new FormControl(''),
-      especie: new FormControl(''),
+      'id': new FormControl('', Validators.required),
+      'nombre': new FormControl('', Validators.required),
+      'especie': new FormControl('', Validators.required),
       variedad: new FormControl(''),
       grado: new FormControl(''),
       foto: new FormControl(''),
@@ -69,7 +69,7 @@ export class AddProductoComponent {
 
   onSubmit(formData: any) {
     this.producto.postProducto(formData).subscribe((res) => {
-      this.toastr.success('Grado Añadido');
+      this.toastr.success('Producto Añadido');
       setTimeout(() => {
         this.reset();
       }, 2000);

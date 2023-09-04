@@ -6,16 +6,25 @@
           <h2>Añadir Producto</h2>
         </div>
         <div class="form-group">
-          <label>ID</label>
-          <input type="number" min="1" formControlName="id" class="form-control" placeholder="ID">
+          <label>ID *</label>
+          <input type="number" min="1" formControlName="id" class="form-control" placeholder="ID" required >
+          <div class="alert alert-danger mt-2" [hidden]="FormData.get('id')?.valid || FormData.get('id')?.pristine">
+            El ID es obligatorio
+          </div>
         </div>
         <div class="form-group">
-          <label>NOMBRE</label>
-          <input type="text" formControlName="nombre" class="form-control" placeholder="NOMBRE">
+          <label>NOMBRE *</label>
+          <input type="text" formControlName="nombre" class="form-control" placeholder="NOMBRE" required minlength="3">
+          <div class="alert alert-danger mt-2" [hidden]="FormData.get('nombre')?.valid || FormData.get('nombre')?.pristine">
+            El Nombre es obligatorio, con minimo 3 caracteres
+          </div>
         </div>
         <div class="form-group">
-          <label>ESPECIE</label>
-          <input type="text" formControlName="especie" class="form-control" placeholder="ESPECIE">
+          <label>ESPECIE *</label>
+          <input type="text" formControlName="especie" class="form-control" placeholder="ESPECIE" required minlength="3">
+          <div class="alert alert-danger mt-2" [hidden]="FormData.get('especie')?.valid || FormData.get('especie')?.pristine">
+            La Especie es obligatoria, con minimo 3 caracteres
+          </div>
         </div>
         <div class="form-group">
           <label>VARIEDAD</label>
@@ -29,9 +38,9 @@
             <option *ngFor="let grado of grados$" >{{ grado.grado }}</option>
           </select>
         </div>
-        <div class="form-group">
-          <label>FOTO</label>
-          <input type="file" (change)="capturarFile($event)">
+        <div class="form-group"><br>
+          <label for="formFile" class="form-label">FOTO</label> <br>
+          <input class="form-control" type="file" (change)="capturarFile($event)">
         </div>
         <div *ngIf="myImage">
           <img [src]="myImage" width="100px">
@@ -40,9 +49,10 @@
           <input type="text" formControlName="foto" class="form-control" [(ngModel)]="myImage" [readOnly]="true" style="display: none">
         </div>
         <div class="mt-2">
-          <button type="submit" class="btn btn-success m-2">Añadir</button>
+          <button type="submit" class="btn btn-success m-2" [disabled]="FormData.invalid">Añadir</button>
         </div>
       </form>
     </div>
   </div>
 </div>
+

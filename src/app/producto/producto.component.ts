@@ -5,8 +5,7 @@ import { EditProductoComponent } from './edit-producto/edit-producto.component';
 import { Router, RouterModule } from '@angular/router';
 import { ServiceProductoService } from '../services/service-producto.service';
 import { ToastrService } from 'ngx-toastr';
-import dxDataGrid from 'devextreme/ui/data_grid';
-import { DxDataGridModule, DxBulletModule, DxTemplateModule } from 'devextreme-angular';
+import { DxDataGridModule } from 'devextreme-angular';
 
 
 @Component({
