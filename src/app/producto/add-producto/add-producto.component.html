@@ -34,7 +34,7 @@
         </div>
         <div class="form-group">
           <label>GRADO</label>
-          <select class="form-select" aria-label="Default select example" formControlName="grado">
+          <select class="form-select" aria-label="Default select example" formControlName="grado" multiple>
             <option *ngFor="let grado of grados$" >{{ grado.grado }}</option>
           </select>
         </div>
